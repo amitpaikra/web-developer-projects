@@ -1,0 +1,30 @@
+<head>
+    <title><%= title%></title>
+    <script src="https://kit.fontawesome.com/6d25efb701.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fa-solid fa-address-book"></i>Contact List</h1>
+    </header>
+    
+
+    <ul>
+        <% for( let i of contact_list) {%>
+            <li class = "flex-class" >
+                <h2 class="inline-class"><%= i.name %></h2>
+                <h2 class="inline-class"><%= i.phone_number %></h2>
+            </li>
+        <%}%>
+    </ul>
+    
+
+    <form action="/contact-list" method="post">
+        <input type="text" name="name" placeholder="Enter your name " required>
+        <input type="number" name="phone_number" placeholder="Enter your phone number" required>
+        <button type="submit">Add contact</button>
+    </form>
+</body>
+
+<script type="text/javascript" src ="/js/home.js"></script>
+</html>
