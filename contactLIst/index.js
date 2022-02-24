@@ -1,7 +1,7 @@
 const express  = require("express");
-const { rmSync } = require("fs");
+// const { rmSync } = require("fs");
 const path = require("path");
-const port = 8000;
+const port = 7000;
 const app = express();//now app const variable has all functionality of express
 
 app.set("view engine", "ejs");
@@ -40,7 +40,7 @@ app.post('/contact-list',(req, res)=>{
         name:req.body.name,
         phone_number:req.body.phone_number
     });
-    contactList.push(req.body);
+    // contactList.push(req.body);
     return res.redirect("back");
 });
 
