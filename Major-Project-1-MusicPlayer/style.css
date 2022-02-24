@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(12,16,39);
+}
+
+
+img{
+    width: 100px;
+    height:75px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+}
+nav > .nav-logo{
+    display:flex;
+    align-items: center; 
+}
+
+nav > .nav-logo > img,
+nav > .nav-logo >  h3{
+    display: inline-block;
+    color:white;
+    padding:10px;
+}
+.nav-bar{
+    width: 50%;
+    text-align: right;
+}
+
+.nav-bar *{
+    margin:10px;
+    color: white;
+}
+
+.nav-bar input{
+    border-color:white;
+    background-color: white;
+    width:40%;
+}
+
+.mic-search{
+    position: absolute;
+    margin-left:-30px; 
+    background-color: white;
+    color:blue;       
+}
