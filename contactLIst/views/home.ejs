@@ -17,14 +17,14 @@
     <ul>
         <% for( let i of contact_list) {%>
             <li class="flex-class">
-                <div>
+                <!-- <div> -->
                     <h2 class="inline-class">
                         <%= i.name %>
                     </h2>
                     <h2 class="inline-class">
-                        <%= i.phone_number %>
+                        <%= i.phone%>
                     </h2>
-                </div>
+                <!-- </div> -->
             </li>
             <%}%>
     </ul>
@@ -32,7 +32,7 @@
 
     <form action="/contact-list" method="post">
         <input type="text" name="name" placeholder="Enter your name " required>
-        <input type="number" name="phone_number" placeholder="Enter your phone number" required>
+        <input type="number" name="phone" placeholder="Enter your phone number" required>
         <button type="submit">Add contact</button>
     </form>
 </body>
