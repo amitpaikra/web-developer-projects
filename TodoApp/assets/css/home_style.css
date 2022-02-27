@@ -1,5 +1,38 @@
 *{
-    background-color: aqua;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
+
+/* main container */
+.container{
+    width: 50%;
+    height: 500px;
+    margin:auto;
+    margin-top:20px;
+    border:2px solid black;
+}
+/* heading of the container */
+.heading{
+    text-align: center;
+    font-size: 2rem;
+    border-bottom: 2px solid grey;
+}
+
+/* description of the container */
+.description{
+    border-bottom: 2px solid grey;
+}
+/* unset all the decoration on input  */
+.description > input{
+    all:unset;
+}
+
+/* set font bold and size 1rem */
+.div-header-font{
+    font-weight: bold;
+    font-size:1rem;
+}
+
+
+
