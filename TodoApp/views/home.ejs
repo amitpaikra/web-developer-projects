@@ -9,20 +9,40 @@
 </head>
 <body>
     <div class="container">
+
         <div class="heading">TODO APP</div>
+        
         <div class="description">
             <div class="div-header-font">DESCRIPTION</div>
             <input type="text" name="user_description" placeholder="What do you need to do?">
         </div>
-        <div>
-            <div class="category">
+        
+        <div class="width-100pcnt display-flex-btwnSpace add-bottom-border">
+            <div class="category width-50pcnt">
                 <div class="div-header-font">CATEGORY</div>
+                <form action="#">
+
+                        <select name="choose_category">
+                            <option value="select">choose a category</option>
+                            <option value="personal">personal</option>
+                            <option value="work">work</option>
+                            <option value="school">school</option>
+                            <option value="cleaning">cleaning</option>
+                            <option value="others">others</option>
+                        </select>
+
+                </form>
             </div>
-            <div class="due-date"></div>
+
+            <div class="due-date width-50pcnt">
+                <div class="div-header-font">DUE-DATE</div>
+                <input type="date" name="user-date">
+            </div>
         </div>
-        <div>
-            <button class="add-task"></button>
-            <button class="delete-task"></button>
+        
+        <div class="display-flex-center">
+            <button type ="submit" class="add-task">ADD TASK</button>
+            <button class="delete-task">DELETE TASK</button>
         </div>
         <ul class="user-list">
             <li>dummy data</li>
