@@ -1,4 +1,5 @@
 const express  = require("express");
+const { redirect } = require("express/lib/response");
 // const { rmSync } = require("fs");
 const path = require("path");
 const port = 7000;
@@ -19,6 +20,7 @@ let contactList = [
     {name : "nothing", phone:"234"}
 
 ]
+
 
 app.get('/', (req, res)=>{
     //query ex: {name : "amit"}, function(err, contacts)
@@ -59,6 +61,25 @@ app.post('/contact-list',(req, res)=>{
 
     // contactList.push(req.body);
     return res.redirect("back");
+});
+
+
+app.get("/delete-contact", (req, res)=>{
+    // document.alert("hello");
+    let id = req.query.id;
+    console.log(req.query.id);
+    console.log("is here",Contact.findById(req.query.id));
+        // Contact.findByIdAndDelete(id, function(err){
+        //     if(err){
+        //         console.error("error in delete an object from db");
+        //         return ;
+        //     }
+
+        //     return res.redirect("back");
+        // });
+
+    res.redirect('back');
+
 });
 
 app.listen(port, function(err){

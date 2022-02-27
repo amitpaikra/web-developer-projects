@@ -50,3 +50,9 @@ form{
     margin-right:auto;
 }
 
+.trash{
+    text-decoration: none;
+    background-color:blue;
+    color:red;
+    font-size: 1.5rem;
+}

@@ -21,9 +21,14 @@
                     <h2 class="inline-class">
                         <%= i.name %>
                     </h2>
+                    <div>
                     <h2 class="inline-class">
                         <%= i.phone%>
                     </h2>
+                    <div class = "trash inline-class">
+                        <a href="/delete-contact/?id=<%= i._id%>">X</a>
+                    </div>
+                </div>
                 <!-- </div> -->
             </li>
             <%}%>
