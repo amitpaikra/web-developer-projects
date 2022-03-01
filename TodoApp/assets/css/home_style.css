@@ -25,10 +25,14 @@
     border-bottom: 2px solid grey;
     padding:10px 5px 10px 5px;
 }
-/* unset all the decoration on input  */
-input{
-    all:unset;
+
+.description > input{
+    width: 100%;
 }
+/* unset all the decoration on input  */
+/* input{
+    all:unset;
+} */
 
 /* set font bold and size 1rem */
 .div-header-font{
@@ -67,8 +71,40 @@ select > option{
     padding:10px;
     margin:10px 0px 10px 0px;
 }
+.user-list{
+    margin:0px 10px 0px 10px;
+    padding:5px 10px 5px 10px;
+}
+li{
+    padding:5px 10px 5px 10px;
+    list-style-type: none;
+    font-size:1.2rem;
+    color:gray;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+hr{
+    margin:5px 0px 10px 0px;
+}
+.user-list > div:nth-child(odd){
+    float:right;
+    background-color: red;
+    color:white;
+    padding:3px;
+}
+
+.user-list > div:nth-child(even){
+    float:right;
+    background-color: purple;
+    color:white;
+    padding:3px;
+}
 
 /* making class for reusing */
+
+.unset_decoration{
+    all:unset;
+}
 .display-flex-btwnSpace{
     box-sizing: border-box;
     display: flex;
@@ -92,7 +128,7 @@ select > option{
 }
 
 .inline-class{
-    display: inline-block;
+    display: inline;
 }
 
 .add-bottom-border{

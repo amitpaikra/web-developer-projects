@@ -11,16 +11,17 @@
     <div class="container">
 
         <div class="heading">TODO APP</div>
-        
+    <!-- form started  -->
+    <form action="/task_list" method="get">
         <div class="description">
             <div class="div-header-font">DESCRIPTION</div>
-            <input type="text" name="user_description" placeholder="What do you need to do?">
+            <input type="text" name="user_description" placeholder="What do you need to do?" class="unset_decoration">
         </div>
         
         <div class="width-100pcnt display-flex-btwnSpace add-bottom-border">
             <div class="category width-50pcnt">
                 <div class="div-header-font">CATEGORY</div>
-                <form action="#">
+                <!-- <form action="#"> -->
 
                         <select name="choose_category">
                             <option value="select">choose a category</option>
@@ -31,21 +32,28 @@
                             <option value="others">others</option>
                         </select>
 
-                </form>
+                <!-- </form> -->
             </div>
 
             <div class="due-date width-50pcnt">
                 <div class="div-header-font">DUE-DATE</div>
-                <input type="date" name="user-date">
+                <input type="date" name="user_date" class="unset_decoration">
             </div>
         </div>
-        
         <div class="display-flex-center">
-            <button type ="submit" class="add-task">ADD TASK</button>
+            <button type ="submit" value="submit" class="add-task">ADD TASK</button>
             <button class="delete-task">DELETE TASK</button>
         </div>
+    </form>
+    <!-- form ended -->
+        
         <ul class="user-list">
-            <li>dummy data</li>
+            <% for(let eachTask of task_list) {%>
+                <hr>
+                <input type="checkbox" name="task_status" class="inline-class">
+                <li class="inline-class"> <%= eachTask %></li>
+                <div class="tag_category inline-class">SCHOOL</div>
+            <%}%>
         </ul>
     </div>
 </body>
