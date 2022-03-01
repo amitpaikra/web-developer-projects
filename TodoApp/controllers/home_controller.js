@@ -1,9 +1,5 @@
 
-let tasks = [
-    "why not add a task?",
-    "Let's make a todoApp",
-    "Annual report submission deadline"
-];
+let tasks = [];
 
 module.exports.home = function(req, res){
     return res.render("home",{
@@ -13,9 +9,12 @@ module.exports.home = function(req, res){
 
 
 module.exports.addTask = function(req, res){
-    tasks.push(req.query.user_description);
-    let chooseCat = req.query.choose_category;
-    let dueDate = req.query.user_date;
+
+    tasks.push({
+        user_description:req.query.user_description,
+        choose_category:req.query.choose_category,
+        due_date:req.query.user_date
+    });
 
     return res.redirect('back');
 };

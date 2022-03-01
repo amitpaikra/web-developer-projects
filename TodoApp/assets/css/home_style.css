@@ -86,18 +86,17 @@ li{
 hr{
     margin:5px 0px 10px 0px;
 }
-.user-list > div:nth-child(odd){
-    float:right;
-    background-color: red;
-    color:white;
-    padding:3px;
-}
 
-.user-list > div:nth-child(even){
+.user-list > div{
     float:right;
     background-color: purple;
     color:white;
     padding:3px;
+    height: 20px;
+    width:20%;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 1.3rem;
 }
 
 /* making class for reusing */
